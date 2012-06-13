@@ -51,7 +51,6 @@ public abstract class DelegatingSpecificDAO
     public DelegatingSpecificDAO(GenericDAO genericDAO) {
         this.genericDAO = genericDAO;
         this.entityClass = determineEntityClass();
-        System.out.println("___entityClass = " + this.entityClass);
         LOG.debug("Initializing {} for entity {}", this.getClass().getSimpleName(), entityClass.getSimpleName());
     }
     /**
