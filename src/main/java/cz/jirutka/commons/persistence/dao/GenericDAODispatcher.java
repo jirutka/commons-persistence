@@ -88,7 +88,7 @@ public class GenericDAODispatcher implements GenericDAO {
 
     @Override
     public <E extends Persistable> 
-            List<E> findByExample(E exampleInstance, String[] includeProperties, Paging paging, Class<E> clazz) {
+            List<E> findByExample(E exampleInstance, String[] includeProperties, PagingOrdering paging, Class<E> clazz) {
         
         if (registry.containsDAO(clazz)) {
             return registry.getDAO(clazz).findByExample(exampleInstance, includeProperties, paging);
@@ -121,7 +121,7 @@ public class GenericDAODispatcher implements GenericDAO {
 
     @Override
     public <E extends Persistable> 
-            List<E> findByProperty(String property, Object value, Paging paging, Class<E> clazz) {
+            List<E> findByProperty(String property, Object value, PagingOrdering paging, Class<E> clazz) {
         
         if (registry.containsDAO(clazz)) {
             return registry.getDAO(clazz).findByProperty(property, value, paging);
@@ -143,7 +143,7 @@ public class GenericDAODispatcher implements GenericDAO {
 
     @Override
     public <E extends Persistable> 
-            List<E> getPaginated(Paging paging, Class<E> clazz) {
+            List<E> getPaginated(PagingOrdering paging, Class<E> clazz) {
         
         if (registry.containsDAO(clazz)) {
             return registry.getDAO(clazz).getPaginated(paging);

@@ -64,12 +64,12 @@ public interface GenericDAO {
      *
      * @param exampleInstance an example instance
      * @param includeProperties properties to match with
-     * @param paging a paging and ordering
+     * @param paging a paging & ordering
      * @param clazz an entity class
      * @return the list of matched query results
      */
     <E extends Persistable> 
-            List<E> findByExample(E exampleInstance, String[] includeProperties, Paging paging, Class<E> clazz);
+            List<E> findByExample(E exampleInstance, String[] includeProperties, PagingOrdering paging, Class<E> clazz);
 
     
     /**
@@ -109,12 +109,12 @@ public interface GenericDAO {
      *
      * @param property a property name to match with
      * @param value the property value
-     * @param paging paging and ordering
+     * @param paging a paging & ordering
      * @param clazz an entity class
      * @return the list of matched query results
      */
     <E extends Persistable>
-            List<E> findByProperty(String property, Object value, Paging paging, Class<E> clazz);
+            List<E> findByProperty(String property, Object value, PagingOrdering paging, Class<E> clazz);
     
     
     /**
@@ -129,14 +129,14 @@ public interface GenericDAO {
     
     /**
      * Return persistent instances of the given entity class according to the
-     * given paging and ordering.
+     * given paging & ordering.
      *
-     * @param paging paging and ordering
+     * @param paging a paging & ordering
      * @param clazz an entity class
      * @return the list of matched query results
      */
     <E extends Persistable>
-            List<E> getPaginated(Paging paging, Class<E> clazz);
+            List<E> getPaginated(PagingOrdering paging, Class<E> clazz);
 
     
     /**

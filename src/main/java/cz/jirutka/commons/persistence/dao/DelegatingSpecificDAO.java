@@ -109,7 +109,7 @@ public abstract class DelegatingSpecificDAO
     }
 
     @Override
-    public List<E> findByExample(E exampleInstance, String[] includeProperties, Paging paging) {
+    public List<E> findByExample(E exampleInstance, String[] includeProperties, PagingOrdering paging) {
         return genericDAO.findByExample(exampleInstance, includeProperties, paging, entityClass);
     }
     
@@ -124,7 +124,7 @@ public abstract class DelegatingSpecificDAO
     }
 
     @Override
-    public List<E> findByProperty(String property, Object value, Paging paging) {
+    public List<E> findByProperty(String property, Object value, PagingOrdering paging) {
         return genericDAO.findByProperty(property, value, paging, entityClass);
     }
     
@@ -134,7 +134,7 @@ public abstract class DelegatingSpecificDAO
     }
 
     @Override
-    public List<E> getPaginated(Paging paging) {
+    public List<E> getPaginated(PagingOrdering paging) {
         return genericDAO.getPaginated(paging, entityClass);
     }
 

@@ -66,10 +66,10 @@ public interface SpecificDAO <E extends Persistable, ID extends Serializable> {
      *
      * @param exampleInstance an example instance
      * @param includeProperties properties to match with
-     * @param paging a paging and ordering
+     * @param paging a paging & ordering
      * @return the list of matched query results
      */
-    List<E> findByExample(E exampleInstance, String[] includeProperties, Paging paging);
+    List<E> findByExample(E exampleInstance, String[] includeProperties, PagingOrdering paging);
 
     
     /**
@@ -104,10 +104,10 @@ public interface SpecificDAO <E extends Persistable, ID extends Serializable> {
      *
      * @param property a property name to match with
      * @param value the property value
-     * @param paging paging and ordering
+     * @param paging a paging & ordering
      * @return the list of matched query results
      */
-    List<E> findByProperty(String property, Object value, Paging paging);
+    List<E> findByProperty(String property, Object value, PagingOrdering paging);
     
     
     /**
@@ -119,12 +119,12 @@ public interface SpecificDAO <E extends Persistable, ID extends Serializable> {
 
     
     /**
-     * Return persistent instances according to the given paging and ordering.
+     * Return persistent instances according to the given paging & ordering.
      *
-     * @param paging paging and ordering
+     * @param paging a paging & ordering
      * @return the list of matched query results
      */
-    List<E> getPaginated(Paging paging);
+    List<E> getPaginated(PagingOrdering paging);
 
     
     /**
