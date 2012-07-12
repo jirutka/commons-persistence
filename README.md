@@ -7,7 +7,7 @@ TODO
 
 ## Content
 
-- advanced Generic DAO based on the DAO Dispatcher pattern
+- advanced Generic DAO based on the DAO Dispatcher pattern (see [presentation](https://github.com/downloads/jirutka/commons-persistence/DAO_designs.pdf))
 
 
 ## Download
