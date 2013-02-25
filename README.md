@@ -16,21 +16,19 @@ TODO
  
 If you’re using Maven2, simply add these lines to your _pom.xml_:
 
-    <repositories>
-        <repository>
-            <id>jirutka.cz</id>
-            <name>Jirutka’s repository</name>
-            <url>http://repos.jirutka.cz/maven/</url>
-        </repository>
-    </repositories>
+```xml
+<dependency>
+    <groupId>cz.jirutka.commons</groupId>
+    <artifactId>commons-persistence</artifactId>
+    <version>1.0</version>
+</dependency>
 
-    <dependencies>
-        <dependency>
-            <groupId>cz.jirutka.commons</groupId>
-            <artifactId>commons-persistence</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
+<repository>
+    <id>cvut-local-repos</id>
+    <name>CVUT Repository Local</name>
+    <url>http://repository.fit.cvut.cz/maven/local-repos/</url>
+</repository>
+```
 
 ### Manual download
 
